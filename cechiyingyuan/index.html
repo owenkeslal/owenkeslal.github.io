@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>策驰影院-在线电影观看指南_高清影视资源_免费看片入口</title>
+<meta name="description" content="策驰影院是一个在线影视观看入口，提供电影、电视剧、动漫与综艺的分类浏览与搜索。本页介绍策驰影院的频道结构、片库分类、使用方式与常见问题，帮助观众快速找到想看的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1024'/%3E%3Cpath d='M20 20h24v6H26v5h14v6H26v5h18v6H20z' fill='%23ffcf4d'/%3E%3Ccircle cx='46' cy='20' r='6' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0b1024;
+    --ink-soft:#1c2440;
+    --paper:#f6f7fb;
+    --card:#ffffff;
+    --line:#e3e6f0;
+    --muted:#5d6784;
+    --gold:#ffcf4d;
+    --coral:#ff5a5f;
+    --teal:#1fb6a6;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink-soft);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- header ---------- */
+  header.site{
+    background:var(--ink);
+    color:#eef1fa;
+    position:sticky;top:0;z-index:50;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .bar{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.12rem;letter-spacing:.5px;color:#fff;}
+  .logo .mark{width:36px;height:36px;flex:0 0 36px;}
+  nav.main{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;font-size:.93rem;}
+  nav.main a{padding:7px 12px;border-radius:9px;color:#c9d1e8;transition:.2s;}
+  nav.main a:hover,nav.main a:focus-visible{background:rgba(255,255,255,.1);color:#fff;}
+  .search{display:flex;gap:6px;flex:1 1 220px;max-width:300px;}
+  .search input{
+    flex:1;min-width:0;padding:8px 12px;border-radius:9px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);color:#fff;font-size:.9rem;font-family:inherit;
+  }
+  .search input::placeholder{color:#8f9abb;}
+  .search button{
+    padding:8px 14px;border:0;border-radius:9px;background:var(--gold);color:#241c00;
+    font-weight:700;font-size:.88rem;cursor:pointer;font-family:inherit;
+  }
+  .search button:hover{filter:brightness(1.06);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:radial-gradient(1200px 420px at 15% -10%,#222d54 0%,var(--ink) 60%);
+    color:#eef1fa;padding:52px 0 56px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.25fr .95fr;gap:40px;align-items:center;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:1.5px;
+    color:var(--gold);border:1px solid rgba(255,207,77,.4);border-radius:999px;padding:4px 13px;margin-bottom:18px;
+  }
+  h1{font-size:2.5rem;line-height:1.25;margin:0 0 16px;font-weight:800;letter-spacing:.5px;color:#fff;}
+  .hero p.lead{font-size:1.02rem;color:#c6cfe6;margin:0 0 26px;max-width:34em;}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:11px;font-weight:700;font-size:.95rem;
+    transition:.2s;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--gold);color:#241c00;}
+  .btn-primary:hover{filter:brightness(1.07);}
+  .btn-ghost{border-color:rgba(255,255,255,.3);color:#e8edfb;}
+  .btn-ghost:hover{background:rgba(255,255,255,.1);}
+  .btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;}
+
+  .screen-card{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+    border-radius:20px;padding:16px;backdrop-filter:blur(4px);
+  }
+  .screen-card .frame{border-radius:12px;overflow:hidden;background:#050812;}
+  .now-list{list-style:none;margin:12px 0 0;padding:0;font-size:.86rem;color:#b9c4e0;display:grid;gap:6px;}
+  .now-list li{display:flex;justify-content:space-between;gap:12px;}
+  .now-list .tag{color:var(--teal);}
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0;}
+  .sec-head{margin-bottom:26px;}
+  .sec-head h2{font-size:1.5rem;margin:0 0 8px;color:var(--ink);letter-spacing:.3px;}
+  .sec-head p{margin:0;color:var(--muted);font-size:.95rem;max-width:46em;}
+  .eyebrow{font-size:.78rem;letter-spacing:2px;color:var(--coral);font-weight:700;display:block;margin-bottom:6px;}
+
+  .channels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .ch{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 18px;transition:.2s;
+  }
+  .ch:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(16,24,48,.09);border-color:#cfd6ea;}
+  .ch .ico{width:38px;height:38px;margin-bottom:12px;}
+  .ch h3{margin:0 0 6px;font-size:1.02rem;color:var(--ink);}
+  .ch p{margin:0;font-size:.86rem;color:var(--muted);line-height:1.65;}
+  .ch .num{font-size:.78rem;color:var(--teal);font-weight:700;display:block;margin-top:9px;}
+
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start;}
+  .prose p{margin:0 0 14px;font-size:.95rem;color:#39415c;}
+  .prose p strong{color:var(--ink);}
+  .facts{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 8px;}
+  .facts h3{margin:0 0 14px;font-size:1rem;color:var(--ink);}
+  .facts dl{margin:0;display:grid;gap:12px;}
+  .facts dt{font-size:.82rem;color:var(--muted);}
+  .facts dd{margin:2px 0 0;font-size:.95rem;color:var(--ink);font-weight:600;}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:step;}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--gold);
+    font-weight:800;font-size:.9rem;margin-bottom:12px;
+  }
+  .step h3{margin:0 0 6px;font-size:1rem;color:var(--ink);}
+  .step p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.7;}
+
+  .dl-band{
+    background:linear-gradient(120deg,#141c38,#1f2a4d);color:#e9eefb;
+    border-radius:22px;padding:34px 32px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+  }
+  .dl-band .txt{flex:1 1 340px;}
+  .dl-band h2{margin:0 0 8px;font-size:1.32rem;color:#fff;}
+  .dl-band p{margin:0;font-size:.9rem;color:#bcc7e4;max-width:42em;}
+  .dl-band .actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn-dl{background:var(--coral);color:#fff;pointer-events:none;opacity:.72;}
+
+  .faq{display:grid;gap:12px;}
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 20px;
+  }
+  details summary{
+    cursor:pointer;font-weight:700;color:var(--ink);font-size:.97rem;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";color:var(--coral);font-weight:800;font-size:1.1rem;}
+  details[open] summary::after{content:"–";}
+  details p{margin:10px 0 0;font-size:.9rem;color:var(--muted);line-height:1.75;}
+
+  footer.site{background:var(--ink);color:#9fabcb;padding:38px 0 30px;font-size:.86rem;}
+  footer.site .fgrid{display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;}
+  footer.site .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1rem;}
+  footer.site .brand .mark{width:30px;height:30px;flex:0 0 30px;}
+  footer.site nav{display:flex;gap:16px;flex-wrap:wrap;}
+  footer.site nav a{color:#9fabcb;}
+  footer.site nav a:hover{color:var(--gold);}
+  footer.site .copy{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);color:#77839f;font-size:.8rem;line-height:1.8;}
+
+  .note{font-size:.82rem;color:var(--muted);}
+  .chat-box{display:none;}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    h1{font-size:2rem;}
+    .channels{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    .search{max-width:none;order:3;flex-basis:100%;}
+    nav.main{margin-left:0;order:2;flex-basis:100%;}
+  }
+  @media (max-width:560px){
+    .hero{padding:36px 0 40px;}
+    h1{font-size:1.72rem;}
+    section{padding:40px 0;}
+    .channels{grid-template-columns:1fr;}
+    .dl-band{padding:26px 20px;}
+    .sec-head h2{font-size:1.28rem;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="策驰影院首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1c2440"/>
+        <path d="M20 20h24v6H26v5h14v6H26v5h18v6H20z" fill="#ffcf4d"/>
+        <circle cx="46" cy="20" r="6" fill="#ff5a5f"/>
+      </svg>
+      策驰影院
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#channels">频道分类</a>
+      <a href="#intro">平台介绍</a>
+      <a href="#howto">观看步骤</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <form class="search" role="search" id="siteSearch">
+      <input type="search" id="q" name="q" placeholder="搜索片名、演员或类型" aria-label="搜索片名、演员或类型">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">在线影视 · 分类浏览</span>
+        <h1>策驰影院</h1>
+        <p class="lead">策驰影院是一个面向影视爱好者的在线观看入口，把电影、电视剧、动漫与综艺按类型整理成清晰的频道。打开页面即可按分类浏览片单，或用搜索框直接定位片名、演员与题材。</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#channels">进入频道分类</a>
+          <a class="btn btn-ghost" href="#howto">了解观看步骤</a>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="frame">
+          <svg viewBox="0 0 320 180" role="img" aria-label="影视播放界面示意图">
+            <rect width="320" height="180" fill="#070b18"/>
+            <rect x="16" y="14" width="288" height="112" rx="8" fill="#101a33"/>
+            <circle cx="160" cy="70" r="24" fill="#ffcf4d" opacity=".92"/>
+            <path d="M154 58l18 12-18 12z" fill="#0b1024"/>
+            <rect x="16" y="138" width="120" height="9" rx="4.5" fill="#2b3a63"/>
+            <rect x="16" y="155" width="80" height="9" rx="4.5" fill="#1e2a4a"/>
+            <rect x="200" y="138" width="104" height="9" rx="4.5" fill="#2b3a63"/>
+            <rect x="200" y="155" width="64" height="9" rx="4.5" fill="#1e2a4a"/>
+          </svg>
+        </div>
+        <ul class="now-list">
+          <li><span>电影频道</span><span class="tag">按题材细分</span></li>
+          <li><span>电视剧频道</span><span class="tag">按地区分栏</span></li>
+          <li><span>动漫与综艺</span><span class="tag">持续更新</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">频道结构</span>
+        <h2>策驰影院的内容分区</h2>
+        <p>片库按内容形态划分主频道，每个频道下再按题材、地区或年份细分。观众可以从一个入口逐层缩小范围，而不必在混杂的列表里翻找。</p>
+      </div>
+      <div class="channels">
+        <article class="ch">
+          <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="8" width="34" height="24" rx="4" fill="#1c2440"/><path d="M17 15l9 5-9 5z" fill="#ffcf4d"/></svg>
+          <h3>电影频道</h3>
+          <p>覆盖动作、喜剧、爱情、悬疑、科幻等常见题材，适合按心情或类型挑片。</p>
+          <span class="num">按题材与年份筛选</span>
+        </article>
+        <article class="ch">
+          <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="9" width="32" height="22" rx="4" fill="#1c2440"/><rect x="9" y="15" width="9" height="10" rx="2" fill="#ff5a5f"/><rect x="22" y="15" width="9" height="10" rx="2" fill="#1fb6a6"/></svg>
+          <h3>电视剧频道</h3>
+          <p>国产剧、港台剧与海外剧分栏陈列，连续剧集按更新顺序排列。</p>
+          <span class="num">按地区与更新进度</span>
+        </article>
+        <article class="ch">
+          <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="#1c2440"/><path d="M20 11l2.6 6.2 6.4.5-4.9 4.2 1.5 6.3L20 24.8l-5.6 3.4 1.5-6.3-4.9-4.2 6.4-.5z" fill="#ffcf4d"/></svg>
+          <h3>动漫频道</h3>
+          <p>国漫、日漫与合家欢动画集中展示，连载作品标注当前集数。</p>
+          <span class="num">按连载状态区分</span>
+        </article>
+        <article class="ch">
+          <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="12" width="30" height="18" rx="4" fill="#1c2440"/><circle cx="14" cy="21" r="3.4" fill="#ff5a5f"/><rect x="22" y="17" width="9" height="3" rx="1.5" fill="#ffcf4d"/><rect x="22" y="23" width="6" height="3" rx="1.5" fill="#1fb6a6"/></svg>
+          <h3>综艺频道</h3>
+          <p>真人秀、访谈与晚会类节目按季归档，方便回看往期内容。</p>
+          <span class="num">按季与期数归档</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div class="prose">
+        <span class="eyebrow">平台介绍</span>
+        <h2 style="font-size:1.5rem;margin:0 0 14px;color:var(--ink);">策驰影院适合哪类观众</h2>
+        <p><strong>想快速定片的人</strong>最直接的需求是减少选择成本。策驰影院把首页做成频道入口，观众先选内容形态，再选题材，最后进入具体作品，路径清晰且每一步都有明确选项。</p>
+        <p><strong>追更连载剧的观众</strong>更关心更新节奏。电视剧与动漫频道会标注当前集数与连载状态，避免点开才发现只更新到前几集。对已完结作品，页面同样给出集数信息，便于一次看完。</p>
+        <p><strong>习惯按演员找片的人</strong>可以使用搜索框输入演员姓名。搜索结果会列出相关作品，再结合频道筛选缩小范围。这一方式比逐层浏览更省时，适合已有明确目标的访问者。</p>
+        <p>策驰影院本身不生产内容，页面呈现的是分类与索引信息。片源可用状态与清晰度以实际页面显示为准，观众在观看前可先查看作品详情中的说明。</p>
+      </div>
+      <aside class="facts">
+        <h3>频道速览</h3>
+        <dl>
+          <div><dt>主频道数量</dt><dd>4 个（电影 / 电视剧 / 动漫 / 综艺）</dd></div>
+          <div><dt>常见筛选维度</dt><dd>题材、地区、年份、连载状态</dd></div>
+          <div><dt>查找方式</dt><dd>分类浏览 + 关键词搜索</dd></div>
+          <div><dt>适合设备</dt><dd>桌面浏览器与移动端浏览器</dd></div>
+          <div><dt>内容更新</dt><dd>以频道实际展示为准</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">使用方式</span>
+        <h2>在策驰影院找到想看的内容</h2>
+        <p>三个步骤覆盖大多数访问场景：有明确片名、只想随便看看、以及想按类型探索。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>直接搜索片名</h3>
+          <p>在页头搜索框输入完整或部分片名，提交后查看结果列表。片名较长时可只输入前几个字，结果会按匹配程度排列。</p>
+        </article>
+        <article class="step">
+          <h3>按频道逐层筛选</h3>
+          <p>从电影、电视剧、动漫、综艺四个入口进入，再选择题材或地区。每次筛选都会缩小列表范围，适合没有明确目标时使用。</p>
+        </article>
+        <article class="step">
+          <h3>查看详情再播放</h3>
+          <p>进入作品详情页可看到简介、集数与相关推荐。确认内容后再开始观看，减少反复切换页面的时间。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="dl-band">
+        <div class="txt">
+          <h2>保存策驰影院使用说明</h2>
+          <p>将频道结构与观看步骤整理成一份离线说明，方便初次使用时对照查看。当前版本待补充完整内容，下载入口将在资料齐备后开放。</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+          <a class="btn btn-ghost" href="#faq" style="border-color:rgba(255,255,255,.3);">查看常见问题</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">常见问题</span>
+        <h2>访问策驰影院前的几个疑问</h2>
+        <p>以下解答基于页面自身的功能范围，不涉及具体片源的授权与清晰度承诺。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>策驰影院需要注册才能浏览吗？</summary>
+          <p>分类浏览与搜索属于页面基础功能，打开即可使用。是否需要登录取决于具体页面的提示，遇到要求登录的环节按页面说明操作即可。</p>
+        </details>
+        <details>
+          <summary>找不到某部片子怎么办？</summary>
+          <p>先尝试缩短关键词，只输入片名中的两到三个字；若仍无结果，可到对应频道按题材浏览。片库收录范围会变化，未搜到不代表永久缺失。</p>
+        </details>
+        <details>
+          <summary>手机上看排版会乱吗？</summary>
+          <p>页面针对小屏做了适配，导航会折行排列，卡片改为单列展示，搜索框占满整行。正文行长与字号按移动端阅读习惯调整，横向不会出现滚动条。</p>
+        </details>
+        <details>
+          <summary>频道里的集数信息准确吗？</summary>
+          <p>集数与连载状态来自页面展示的数据，可能随更新变化。观看前建议以详情页当前显示为准，本站不对第三方片源的更新速度作保证。</p>
+        </details>
+      </div>
+      <p class="note" style="margin-top:22px;">说明：策驰影院为影视分类浏览入口，页面内容以索引与导航为主，具体片源的可用性、清晰度与播放体验由实际页面决定。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1c2440"/>
+            <path d="M20 20h24v6H26v5h14v6H26v5h18v6H20z" fill="#ffcf4d"/>
+            <circle cx="46" cy="20" r="6" fill="#ff5a5f"/>
+          </svg>
+          策驰影院
+        </div>
+        <p style="margin:10px 0 0;max-width:30em;">影视分类浏览与搜索入口，帮助观众按频道快速定位想看的内容。</p>
+      </div>
+      <nav aria-label="页尾导航">
+        <a href="#channels">频道分类</a>
+        <a href="#intro">平台介绍</a>
+        <a href="#howto">观看步骤</a>
+        <a href="#faq">常见问题</a>
+        <a href="#top">返回顶部</a>
+      </nav>
+    </div>
+    <div class="copy">
+      策驰影院 · 本页为影视导航与使用说明页面，不存储视频文件。片源信息以实际页面展示为准。
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var form = document.getElementById('siteSearch');
+    var input = document.getElementById('q');
+    if(!form || !input) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = input.value.trim();
+      if(!v){
+        input.focus();
+        return;
+      }
+      var map = [
+        {keys:['电影','片','动作','喜剧','爱情','悬疑','科幻'], target:'#channels'},
+        {keys:['剧','电视剧','连续剧','港剧','美剧'], target:'#channels'},
+        {keys:['动漫','动画','漫画','番'], target:'#channels'},
+        {keys:['综艺','节目','真人秀','访谈'], target:'#channels'},
+        {keys:['怎么','步骤','使用','方法'], target:'#howto'},
+        {keys:['问题','疑问','注册','登录','手机'], target:'#faq'},
+        {keys:['介绍','平台','是什么'], target:'#intro'}
+      ];
+      var target = '#channels';
+      for(var i=0;i<map.length;i++){
+        for(var j=0;j<map[i].keys.length;j++){
+          if(v.indexOf(map[i].keys[j]) !== -1){ target = map[i].target; break; }
+        }
+        if(target !== '#channels') break;
+      }
+      var el = document.querySelector(target);
+      if(el){
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
