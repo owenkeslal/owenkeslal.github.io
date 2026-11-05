@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>柚子猫-柚子猫主题下载_柚子猫壁纸与桌面美化资源</title>
+<meta name="description" content="柚子猫是一个专注柚子猫主题资源的首页，提供柚子猫壁纸、桌面美化与主题素材的浏览入口，帮助访问者快速了解柚子猫主题内容与使用方式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='34' r='22' fill='%23f5a623'/%3E%3Cpath d='M14 18l8 10M50 18l-8 10' stroke='%23f5a623' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='32' r='3' fill='%23332'/%3E%3Ccircle cx='40' cy='32' r='3' fill='%23332'/%3E%3Cpath d='M28 42q4 4 8 0' stroke='%23332' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#fdf8ef;
+    --paper:#ffffff;
+    --ink:#2f2a24;
+    --ink-soft:#6b6257;
+    --line:#eadfce;
+    --accent:#e8912a;
+    --accent-deep:#b86b12;
+    --green:#4f7a5a;
+    --shadow:0 10px 30px rgba(120,90,40,.08);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:var(--accent-deep);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  header.site{
+    position:sticky;top:0;z-index:30;
+    background:rgba(253,248,239,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.2rem;color:var(--ink);}
+  .brand:hover{text-decoration:none;}
+  .brand svg{width:42px;height:42px;flex:none;}
+  nav.links{display:flex;gap:22px;font-size:.95rem;}
+  nav.links a{color:var(--ink-soft);}
+  nav.links a:hover{color:var(--accent-deep);text-decoration:none;}
+  .hero{padding:56px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;}
+  .eyebrow{
+    display:inline-block;font-size:.8rem;letter-spacing:.14em;
+    color:var(--accent-deep);background:#fbe8cd;
+    padding:5px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(2rem,4.4vw,3.1rem);
+    line-height:1.2;margin:0 0 18px;letter-spacing:.02em;
+  }
+  .hero p.lead{font-size:1.05rem;color:var(--ink-soft);margin:0 0 26px;max-width:34em;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:999px;font-weight:600;font-size:.98rem;
+    border:1px solid transparent;cursor:pointer;transition:.2s;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(232,145,42,.28);}
+  .btn-primary:hover{background:var(--accent-deep);text-decoration:none;}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent);text-decoration:none;}
+  .btn[aria-disabled="true"]{pointer-events:none;opacity:.85;}
+  .hero-art{
+    background:linear-gradient(160deg,#fce9cf,#f7f2e6);
+    border-radius:28px;padding:26px;box-shadow:var(--shadow);
+  }
+  .hero-art figcaption{font-size:.82rem;color:var(--ink-soft);text-align:center;margin-top:12px;}
+  section{padding:44px 0;}
+  .section-head{max-width:40em;margin-bottom:26px;}
+  .section-head h2{font-size:1.55rem;margin:0 0 10px;}
+  .section-head p{margin:0;color:var(--ink-soft);font-size:.98rem;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{
+    background:var(--paper);border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .card .icon{width:46px;height:46px;border-radius:14px;background:#fbe8cd;display:flex;align-items:center;justify-content:center;}
+  .card .icon svg{width:26px;height:26px;}
+  .card h3{margin:0;font-size:1.12rem;}
+  .card p{margin:0;font-size:.94rem;color:var(--ink-soft);}
+  .card .meta{font-size:.8rem;color:var(--accent-deep);font-weight:600;margin-top:auto;}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .prose p{margin:0 0 16px;font-size:.99rem;}
+  .prose h3{font-size:1.15rem;margin:26px 0 10px;}
+  .checklist{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+  .checklist li{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:14px 18px;font-size:.95rem;display:flex;gap:12px;align-items:flex-start;
+  }
+  .checklist li::before{
+    content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%,var(--accent) 0 40%,transparent 41%),
+               conic-gradient(var(--green) 0 100%);
+  }
+  .steps{counter-reset:step;display:grid;gap:16px;}
+  .step{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px 20px 62px;position:relative;font-size:.96rem;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:20px;top:20px;width:28px;height:28px;border-radius:50%;
+    background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step strong{display:block;margin-bottom:4px;}
+  .faq{display:grid;gap:12px;}
+  details{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px;font-size:.96rem;
+  }
+  summary{cursor:pointer;font-weight:600;list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";float:right;color:var(--accent-deep);font-weight:700;}
+  details[open] summary::after{content:"–";}
+  details p{margin:12px 0 0;color:var(--ink-soft);}
+  .cta-band{
+    background:linear-gradient(150deg,#fff3e0,#f6efe2);
+    border:1px solid var(--line);border-radius:26px;
+    padding:38px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+  }
+  .cta-band h2{margin:0 0 10px;font-size:1.5rem;}
+  .cta-band p{margin:0;color:var(--ink-soft);font-size:.98rem;}
+  footer{
+    border-top:1px solid var(--line);margin-top:30px;padding:34px 0 40px;
+    font-size:.88rem;color:var(--ink-soft);
+  }
+  .foot-inner{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);}
+  .foot-brand svg{width:30px;height:30px;}
+  footer nav{display:flex;flex-wrap:wrap;gap:18px;}
+  @media (max-width:860px){
+    .hero-grid,.split,.cta-band{grid-template-columns:1fr;}
+    .cards{grid-template-columns:1fr;}
+    nav.links{display:none;}
+    .hero{padding:38px 0 26px;}
+    .hero-art{order:-1;}
+    section{padding:34px 0;}
+    .cta-band{padding:26px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="柚子猫首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="34" r="22" fill="#f5a623"/>
+        <path d="M14 18l8 10M50 18l-8 10" stroke="#f5a623" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="24" cy="32" r="3" fill="#332"/>
+        <circle cx="40" cy="32" r="3" fill="#332"/>
+        <path d="M28 42q4 4 8 0" stroke="#332" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      柚子猫
+    </a>
+    <nav class="links" aria-label="主导航">
+      <a href="#what">主题概览</a>
+      <a href="#resources">资源栏目</a>
+      <a href="#guide">使用指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题资源首页</span>
+        <h1>柚子猫</h1>
+        <p class="lead">柚子猫是一个围绕“柚子猫”这一主题整理内容的资源首页。这里把壁纸、桌面美化与主题素材收纳在同一处，方便你先看清有哪些内容，再决定从哪一项开始使用。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#resources">浏览柚子猫资源</a>
+          <a class="btn btn-ghost" href="#download" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+      <figure class="hero-art" style="margin:0">
+        <svg viewBox="0 0 320 220" role="img" aria-label="柚子猫主题插画：一只橘色的猫坐在柚子旁">
+          <rect x="0" y="0" width="320" height="220" rx="18" fill="#fff8ec"/>
+          <circle cx="252" cy="52" r="26" fill="#fbe0b4"/>
+          <ellipse cx="160" cy="196" rx="120" ry="10" fill="#f0e3cd"/>
+          <ellipse cx="160" cy="150" rx="58" ry="44" fill="#f5a623"/>
+          <path d="M112 92l12 24M208 92l-12 24" stroke="#f5a623" stroke-width="16" stroke-linecap="round"/>
+          <circle cx="140" cy="140" r="6" fill="#332"/>
+          <circle cx="180" cy="140" r="6" fill="#332"/>
+          <path d="M152 158q8 7 16 0" stroke="#332" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="70" cy="160" r="34" fill="#e9c46a"/>
+          <path d="M70 126q8 -10 16 -6" stroke="#4f7a5a" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="250" cy="158" r="26" fill="#e9c46a" opacity=".8"/>
+        </svg>
+        <figcaption>柚子猫主题视觉示意，用于说明本站内容方向</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>柚子猫主题概览</h2>
+        <p>先弄清“柚子猫”在页面里指什么，再决定如何使用这些素材。</p>
+      </div>
+      <div class="split">
+        <div class="prose">
+          <p>柚子猫是本站统一使用的主题名称，页面围绕它组织了壁纸、桌面美化与主题素材三类内容。这里的“柚子猫”既指整体风格，也指资源分类的入口，访问者不需要先安装任何软件，就能在首页读到内容说明。</p>
+          <p>首页的结构按访问顺序安排：首屏给出主题定位与两个入口，中部说明资源栏目与挑选方法，后段提供使用步骤与常见问题。这样安排是为了让第一次来到柚子猫的读者先建立整体印象，再逐项进入具体内容。</p>
+          <h3>适合谁来看</h3>
+          <p>如果你正在为桌面寻找一套统一的视觉风格，或者想先了解柚子猫主题包含哪些素材，这个首页可以直接作为起点。内容以浏览和挑选为主，阅读过程不依赖额外组件。</p>
+        </div>
+        <ul class="checklist">
+          <li>想先了解柚子猫主题整体方向的访问者，可以从概览读起。</li>
+          <li>需要壁纸或桌面美化素材的人，可直接进入资源栏目。</li>
+          <li>已经选好内容、准备使用的读者，可查看使用指南。</li>
+          <li>对下载方式或素材范围有疑问的，可查看常见问题。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>柚子猫资源栏目</h2>
+        <p>三个栏目分别承担不同任务，内容互不重复，按需进入即可。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="#b86b12" stroke-width="1.8"/><path d="M3 13l4-4 4 4 3-3 4 4" fill="none" stroke="#4f7a5a" stroke-width="1.8"/></svg>
+          </div>
+          <h3>柚子猫壁纸</h3>
+          <p>以柚子猫形象与配色为核心的画面素材，适合用作电脑或手机背景。栏目按画面比例与使用场景分类，方便先看再选。</p>
+          <span class="meta">浏览为主 · 按比例挑选</span>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="#b86b12" stroke-width="1.8"/><path d="M9 20h6M12 16v4" stroke="#4f7a5a" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>桌面美化</h3>
+          <p>围绕柚子猫主题整理的桌面视觉搭配内容，包括配色参考与元素组合思路，用来让桌面与壁纸风格保持一致。</p>
+          <span class="meta">搭配参考 · 统一风格</span>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5z" fill="none" stroke="#b86b12" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>主题素材</h3>
+          <p>柚子猫主题相关的图标、装饰与视觉元素集合，作为壁纸与桌面美化之间的补充，帮助页面表达统一的气质。</p>
+          <span class="meta">元素补充 · 页面统一</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>柚子猫使用指南</h2>
+        <p>从挑选到上手，按四步完成，不需要额外准备。</p>
+      </div>
+      <div class="split">
+        <div class="steps">
+          <div class="step"><strong>确定用途</strong>先想清楚是更换桌面背景，还是搭配一整套视觉元素，用途不同，选择的栏目也不同。</div>
+          <div class="step"><strong>进入对应栏目</strong>壁纸、桌面美化与主题素材各有侧重，在柚子猫的资源栏目中找到与用途一致的一项。</div>
+          <div class="step"><strong>对照比例与场景</strong>挑选时留意素材比例是否与屏幕匹配，避免画面被裁切，影响整体观感。</div>
+          <div class="step"><strong>统一下载与保存</strong>确定内容后再保存，保持同一套柚子猫素材的来源一致，后续替换也更省心。</div>
+        </div>
+        <div class="prose">
+          <h3>挑选时看什么</h3>
+          <p>第一看比例，宽屏与竖屏的素材不能混用；第二看配色，柚子猫主题以暖橙与米色为主，搭配时尽量让背景与桌面元素处于同一色系；第三看用途，单张壁纸与整套美化方案的准备程度不同。</p>
+          <h3>使用后的维护</h3>
+          <p>素材保存后建议按栏目归档，方便以后替换或对比。若只想更换其中一项，保留其余柚子猫素材不动，整体风格就不会被打破。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>柚子猫常见问题</h2>
+        <p>集中回应访问者在浏览与使用过程中最常问到的几点。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>柚子猫首页主要提供什么内容？</summary>
+          <p>首页围绕柚子猫这一主题，提供壁纸、桌面美化与主题素材三类内容的介绍与入口，重点在于让访问者先了解内容范围，再进入具体栏目。</p>
+        </details>
+        <details>
+          <summary>浏览这些内容需要注册或安装软件吗？</summary>
+          <p>浏览首页内容不需要注册，也不需要安装额外组件。页面本身以静态内容呈现，打开即可阅读。</p>
+        </details>
+        <details>
+          <summary>柚子猫素材可以混搭使用吗？</summary>
+          <p>可以。壁纸、桌面美化与主题素材同属一个视觉体系，混搭时建议保持暖橙与米色为主的配色，避免风格冲突。</p>
+        </details>
+        <details>
+          <summary>下载入口目前是什么状态？</summary>
+          <p>页面的下载按钮目前为占位状态，点击后不会触发文件传输。后续会替换为正式地址，届时按钮即可正常使用。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>从柚子猫开始整理你的桌面</h2>
+          <p>先浏览资源栏目，确定用途与比例，再保存合适的素材。需要完整说明时，可回到使用指南对照步骤操作。</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#resources">查看资源栏目</a>
+          <a class="btn btn-ghost" href="#download" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="foot-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="34" r="22" fill="#f5a623"/>
+          <path d="M14 18l8 10M50 18l-8 10" stroke="#f5a623" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="24" cy="32" r="3" fill="#332"/>
+          <circle cx="40" cy="32" r="3" fill="#332"/>
+          <path d="M28 42q4 4 8 0" stroke="#332" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        柚子猫
+      </div>
+      <p style="margin:10px 0 0;max-width:32em;">柚子猫主题资源首页，围绕壁纸、桌面美化与主题素材组织内容，供浏览与挑选参考。</p>
+    </div>
+    <nav aria-label="页尾导航">
+      <a href="#what">主题概览</a>
+      <a href="#resources">资源栏目</a>
+      <a href="#guide">使用指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
