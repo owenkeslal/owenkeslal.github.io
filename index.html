@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吃瓜推特大赛-推特热搜吃瓜大赛_推特吃瓜大赛怎么玩_吃瓜推特大赛首页</title>
+<meta name="description" content="吃瓜推特大赛首页：汇集推特热搜吃瓜大赛的赛制说明、围观入口、话题榜单与参赛玩法，帮你看懂推特吃瓜大赛怎么玩，快速进入吃瓜推特大赛现场。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23161122'/%3E%3Cpath d='M32 12c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z' fill='%23ffcf5c'/%3E%3Ccircle cx='24' cy='42' r='4' fill='%23ff6b9d'/%3E%3Ccircle cx='42' cy='44' r='3' fill='%2364e0c8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f0d18;
+  --bg-soft:#171426;
+  --card:#1d1930;
+  --line:#2e2846;
+  --txt:#efeaff;
+  --muted:#a79fc4;
+  --gold:#ffcf5c;
+  --pink:#ff6b9d;
+  --mint:#64e0c8;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(1100px 500px at 15% -10%,#2a1f47 0%,transparent 60%),var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,13,24,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.logo-mark{width:36px;height:36px;flex:none}
+.logo-text{
+  font-size:18px;font-weight:800;letter-spacing:.5px;
+  background:linear-gradient(92deg,var(--gold),var(--pink) 70%,var(--mint));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  white-space:nowrap;
+}
+.nav{display:flex;gap:22px;font-size:14.5px;color:var(--muted)}
+.nav a{position:relative;padding:4px 0;transition:color .2s}
+.nav a:hover,.nav a:focus-visible{color:var(--gold)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .25s}
+.nav a:hover::after{width:100%}
+.head-cta{
+  font-size:14px;font-weight:700;color:#1a1426;background:linear-gradient(95deg,var(--gold),#ffb44d);
+  padding:9px 16px;border-radius:999px;white-space:nowrap;transition:transform .2s,box-shadow .2s;
+  box-shadow:0 6px 18px rgba(255,180,77,.25);
+}
+.head-cta:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(255,180,77,.35)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:6px 10px;font-size:13px}
+
+/* hero */
+.hero{padding:64px 0 48px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mint);
+  border:1px solid rgba(100,224,200,.35);background:rgba(100,224,200,.08);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;letter-spacing:.4px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(100,224,200,.18)}
+h1{
+  font-size:clamp(30px,4.6vw,50px);line-height:1.18;font-weight:900;letter-spacing:1px;
+  background:linear-gradient(100deg,#fff 10%,var(--gold) 45%,var(--pink) 85%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:18px;
+}
+.hero-lead{font-size:16.5px;color:#cfc7e8;max-width:36em;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(95deg,var(--pink),#b866ff);
+  color:#fff;font-weight:800;font-size:15.5px;padding:13px 26px;border-radius:999px;
+  box-shadow:0 10px 28px rgba(255,107,157,.3);transition:transform .2s,box-shadow .2s;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,107,157,.4)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;
+  padding:12px 22px;border-radius:999px;border:1px solid var(--line);color:#d9d2f0;
+  background:rgba(255,255,255,.03);transition:border-color .2s,color .2s;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.stat b{display:block;font-size:22px;color:var(--gold);font-weight:900;letter-spacing:.5px}
+.stat span{font-size:13px;color:var(--muted)}
+
+.hero-art{position:relative}
+.art-card{
+  background:linear-gradient(160deg,#241f3b,#171326);
+  border:1px solid var(--line);border-radius:24px;padding:20px;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+}
+.art-head{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.timer{color:var(--pink);font-weight:800;font-variant-numeric:tabular-nums}
+.seed-list{display:flex;flex-direction:column;gap:10px}
+.seed{
+  display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:11px 13px;
+}
+.seed .rank{font-size:13px;font-weight:900;width:22px;color:var(--gold);flex:none}
+.seed .name{font-size:14px;font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seed .heat{font-size:12px;color:var(--mint);flex:none}
+.art-foot{margin-top:14px;font-size:12px;color:var(--muted);text-align:center}
+
+/* section base */
+.section{padding:54px 0;border-top:1px solid rgba(46,40,70,.7)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:26px;flex-wrap:wrap}
+.sec-title{font-size:clamp(21px,2.6vw,27px);font-weight:900;letter-spacing:.5px}
+.sec-title em{font-style:normal;color:var(--gold)}
+.sec-desc{font-size:14px;color:var(--muted);max-width:44em}
+
+/* rules cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(170deg,var(--card),#181428);
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  transition:transform .25s,border-color .25s;
+}
+.card:hover{transform:translateY(-3px);border-color:rgba(255,207,92,.45)}
+.card-ico{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,207,92,.12);margin-bottom:14px;
+}
+.card h3{font-size:16.5px;font-weight:800;margin-bottom:8px}
+.card p{font-size:14px;color:#bdb4d8}
+.card .tag{
+  display:inline-block;margin-top:14px;font-size:12px;color:var(--mint);
+  border:1px solid rgba(100,224,200,.3);border-radius:999px;padding:2px 10px;
+}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+.flow-item{
+  position:relative;background:rgba(255,255,255,.03);border:1px solid var(--line);
+  border-radius:14px;padding:20px 18px 18px;
+}
+.flow-item::before{
+  counter-increment:step;content:"0" counter(step);
+  font-size:12px;font-weight:900;color:var(--gold);letter-spacing:1px;
+  display:block;margin-bottom:10px;
+}
+.flow-item h4{font-size:15px;font-weight:800;margin-bottom:6px}
+.flow-item p{font-size:13.5px;color:var(--muted)}
+
+/* topics */
+.topic-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.topic{
+  display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.028);
+  border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+}
+.topic .no{
+  flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  font-size:13px;font-weight:900;color:#1a1426;
+  background:linear-gradient(135deg,var(--gold),#ffb44d);
+}
+.topic h4{font-size:15px;font-weight:800;margin-bottom:4px}
+.topic p{font-size:13.5px;color:var(--muted)}
+.topic .badge{font-size:11.5px;color:var(--pink);border:1px solid rgba(255,107,157,.35);border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+
+/* guide + side */
+.split{display:grid;grid-template-columns:1.35fr .65fr;gap:26px;align-items:start}
+.prose h3{font-size:17px;font-weight:800;margin:22px 0 8px;color:#fff}
+.prose h3:first-child{margin-top:0}
+.prose p{font-size:14.8px;color:#c6bede;margin-bottom:10px}
+.prose ul{list-style:none;margin:6px 0 12px}
+.prose li{position:relative;padding-left:18px;font-size:14.6px;color:#c6bede;margin-bottom:7px}
+.prose li::before{content:"";position:absolute;left:0;top:.68em;width:7px;height:7px;border-radius:2px;background:var(--pink);transform:rotate(45deg)}
+.side-card{
+  background:linear-gradient(165deg,#221d38,#161226);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;position:sticky;top:88px;
+}
+.side-card h3{font-size:15.5px;font-weight:800;margin-bottom:6px}
+.side-card .sub{font-size:12.5px;color:var(--muted);margin-bottom:16px}
+.mini{display:flex;align-items:center;justify-content:space-between;font-size:13.5px;padding:9px 0;border-bottom:1px dashed rgba(46,40,70,.9)}
+.mini:last-of-type{border-bottom:none}
+.mini span:last-child{color:var(--mint);font-variant-numeric:tabular-nums}
+.side-btn{
+  display:block;text-align:center;margin-top:16px;padding:11px;border-radius:11px;
+  font-size:14px;font-weight:800;color:#1a1426;background:linear-gradient(95deg,var(--mint),#8ff0d9);
+  transition:filter .2s;
+}
+.side-btn:hover{filter:brightness(1.06)}
+
+/* faq */
+.faq details{
+  background:rgba(255,255,255,.028);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;margin-bottom:10px;
+}
+.faq summary{cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:19px;font-weight:900;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14px;color:#bdb4d8;margin-top:10px}
+
+/* footer */
+.site-foot{border-top:1px solid var(--line);padding:34px 0 40px;margin-top:10px;background:rgba(0,0,0,.2)}
+.foot-top{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{max-width:340px}
+.foot-brand .logo{margin-bottom:10px}
+.foot-brand p{font-size:13.5px;color:var(--muted)}
+.foot-links{display:flex;gap:44px;flex-wrap:wrap}
+.foot-col h4{font-size:13.5px;font-weight:800;margin-bottom:10px;color:#e6dfff}
+.foot-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:6px;transition:color .2s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{margin-top:26px;padding-top:16px;border-top:1px dashed rgba(46,40,70,.9);font-size:12.5px;color:#7e769b;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero{padding:44px 0 36px}
+  .grid-3{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .topic-list{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .side-card{position:static}
+}
+@media (max-width:720px){
+  .nav{display:none}
+  .nav.open{
+    display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;
+    background:#141122;border-bottom:1px solid var(--line);padding:8px 20px 14px;
+  }
+  .nav.open a{padding:11px 0;border-bottom:1px solid rgba(46,40,70,.6);font-size:15px}
+  .menu-btn{display:inline-block;order:2}
+  .head-cta{display:none}
+  .head-inner{position:relative;flex-wrap:wrap}
+  .logo-text{font-size:16px}
+  .flow{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+  .stat b{font-size:19px}
+  .section{padding:40px 0}
+  .art-card{padding:16px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="吃瓜推特大赛首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#241f3b" stroke="#ffcf5c" stroke-width="2"/>
+        <path d="M32 12c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z" fill="#ffcf5c"/>
+        <circle cx="23" cy="43" r="4.4" fill="#ff6b9d"/>
+        <circle cx="42" cy="45" r="3.2" fill="#64e0c8"/>
+      </svg>
+      <span class="logo-text">吃瓜推特大赛</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    <nav class="nav" id="mainNav" aria-label="主导航">
+      <a href="#rules">赛制说明</a>
+      <a href="#flow">参赛流程</a>
+      <a href="#topics">热搜话题</a>
+      <a href="#guide">围观指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#flow">进入赛场</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i class="dot"></i>推特热搜 · 吃瓜观赛现场</span>
+        <h1>吃瓜推特大赛</h1>
+        <p class="hero-lead">
+          吃瓜推特大赛是一场围绕推特热搜话题展开的围观活动：参赛者从公开话题中挑选自己关注的瓜，用截图、时间线与观点整理成一份“吃瓜记录”，再由围观者投票选出本轮最值得跟进的现场。这里提供赛制说明、参赛流程与实时话题榜单。
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#flow">报名参赛
+            <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn-ghost" href="#topics">看看今天在吃什么瓜</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>4 轮</b><span>单赛季赛制</span></div>
+          <div class="stat"><b>3 类</b><span>参赛作品形式</span></div>
+          <div class="stat"><b>公开</b><span>投票与榜单</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card">
+          <div class="art-head">
+            <span>本轮话题池</span>
+            <span class="timer" id="timer">距投稿截止 02:00:00</span>
+          </div>
+          <div class="seed-list">
+            <div class="seed"><span class="rank">1</span><span class="name">#某剧大结局争议</span><span class="heat">高热</span></div>
+            <div class="seed"><span class="rank">2</span><span class="name">#新品发布会翻车现场</span><span class="heat">热议</span></div>
+            <div class="seed"><span class="rank">3</span><span class="name">#体育赛事判罚讨论</span><span class="heat">上升</span></div>
+            <div class="seed"><span class="rank">4</span><span class="name">#跨界联名到底值不值</span><span class="heat">新进</span></div>
+            <div class="seed"><span class="rank">5</span><span class="name">#年度热梗回顾合集</span><span class="heat">稳定</span></div>
+          </div>
+          <div class="art-foot">话题池每日更新，以公开热搜为依据</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 赛制 -->
+  <section class="section" id="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">吃瓜推特大赛<em>赛制说明</em></h2>
+        <p class="sec-desc">吃瓜推特大赛不做真假裁判，只比“谁的记录更完整、更好读”。三档参赛形式对应三种投入程度，新手也能从轻量档开始。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H8l-4 3V5z" stroke="#ffcf5c" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>轻量档：单条吃瓜</h3>
+          <p>选一个热搜话题，提交一张截图加 100 字以内的背景说明，讲清事情起因与你关注的点，适合第一次参加吃瓜推特大赛的围观者。</p>
+          <span class="tag">门槛最低</span>
+        </article>
+        <article class="card">
+          <div class="card-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="#ff6b9d" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>标准档：时间线整理</h3>
+          <p>按时间顺序整理 5–8 条公开推文，标注发布时间与关键转折，形成一条可追溯的吃瓜时间线，是吃瓜推特大赛里最常见的形式。</p>
+          <span class="tag">推荐参与</span>
+        </article>
+        <article class="card">
+          <div class="card-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.6 5.6L21 9.6l-4.5 4.3 1.1 6.1L12 17.1 6.4 20l1.1-6.1L3 9.6l6.4-1z" stroke="#64e0c8" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>深度档：观点复盘</h3>
+          <p>在时间线基础上补充多方说法与你的判断，说明哪些信息已确认、哪些仍在讨论，篇幅不限，评审更看重资料出处是否标清。</p>
+          <span class="tag">高分常客</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流程 -->
+  <section class="section" id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">参赛流程：四步进入<em>吃瓜现场</em></h2>
+        <p class="sec-desc">从选题到投票，吃瓜推特大赛的每个环节都在页面内完成，不需要额外注册复杂账号。</p>
+      </div>
+      <div class="flow">
+        <div class="flow-item">
+          <h4>选题</h4>
+          <p>从话题池中挑一个你真正跟过的话题，避免选自己完全不了解的热搜。</p>
+        </div>
+        <div class="flow-item">
+          <h4>整理</h4>
+          <p>截图保留原推文界面，标注时间与账号信息，删除无关的转发与广告。</p>
+        </div>
+        <div class="flow-item">
+          <h4>提交</h4>
+          <p>按轻量、标准或深度档提交作品，标题写明话题与你的切入角度。</p>
+        </div>
+        <div class="flow-item">
+          <h4>投票</h4>
+          <p>围观者按“信息完整度、可读性、出处清晰度”三项打分，结果公示。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 话题 -->
+  <section class="section" id="topics">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">近期<em>热搜话题</em>观察</h2>
+        <p class="sec-desc">以下为吃瓜推特大赛话题池的常见类型，具体条目随公开热搜每日调整，页面展示的是类别示例而非固定排名。</p>
+      </div>
+      <div class="topic-list">
+        <div class="topic">
+          <span class="no">01</span>
+          <div>
+            <h4>影视综讨论<span class="badge">长期热门</span></h4>
+            <p>剧集结局、角色走向与改编争议，信息量集中、时间线清晰，最适合做成标准档作品。</p>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="no">02</span>
+          <div>
+            <h4>品牌与产品事件<span class="badge">节奏快</span></h4>
+            <p>发布会现场、宣传文案翻车、联名定价争议，往往几小时内多次反转，需要边看边记。</p>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="no">03</span>
+          <div>
+            <h4>体育与赛事判罚<span class="badge">观点对立</span></h4>
+            <p>判罚解读与赛后发言容易形成两派，写复盘时建议把双方说法并列，不做单边结论。</p>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="no">04</span>
+          <div>
+            <h4>年度热梗回顾<span class="badge">轻松向</span></h4>
+            <p>梗的起源、扩散路径与二次创作，适合轻量档，也常被用来补充吃瓜推特大赛的趣味单元。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 指南 -->
+  <section class="section" id="guide">
+    <div class="wrap split">
+      <div class="prose">
+        <h2 class="sec-title" style="margin-bottom:16px">围观指南：吃瓜推特大赛怎么玩</h2>
+        <h3>先看时间线，再看结论</h3>
+        <p>推特上的讨论通常先出现零散爆料，再被大号转发放大，最后才出现较为完整的说明。吃瓜推特大赛的作品之所以按时间线评分，就是希望围观者先看清顺序，再判断谁说得更接近事实。</p>
+        <h3>截图要留下可核对的痕迹</h3>
+        <p>一份合格的吃瓜记录，截图里应当能看到账号名、发布时间与正文。只截观点不截来源，会在评审环节被扣分；转载他人整理的内容，也需要注明最初出处。</p>
+        <h3>区分“已确认”和“仍在讨论”</h3>
+        <ul>
+          <li>当事人公开发言、官方公告属于已确认信息；</li>
+          <li>匿名爆料、二手转述只能算讨论中的线索；</li>
+          <li>把两类内容混在一起写，容易让读者误判。</li>
+        </ul>
+        <p>这也是吃瓜推特大赛反复强调的一条：围观可以有立场，但记录要留余地。把不确定的部分标出来，作品反而更受认可。</p>
+        <h3>别把热度当结论</h3>
+        <p>热搜高只说明讨论人多，不代表说法成立。吃瓜推特大赛的评审表中，热度不占分值，信息完整度与出处清晰度才是主要依据。</p>
+      </div>
+
+      <aside class="side-card">
+        <h3>本轮数据速览</h3>
+        <p class="sub">统计口径为页面内提交记录</p>
+        <div class="mini"><span>参赛作品</span><span>128 份</span></div>
+        <div class="mini"><span>标准档占比</span><span>57%</span></div>
+        <div class="mini"><span>话题池条目</span><span>24 个</span></div>
+        <div class="mini"><span>投票开放</span><span>每日 20:00</span></div>
+        <div class="mini"><span>结果公示</span><span>次日 12:00</span></div>
+        <a class="side-btn" href="#flow">查看参赛流程</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">关于吃瓜推特大赛的<em>常见问题</em></h2>
+        <p class="sec-desc">以下回答覆盖参赛资格、作品要求与投票规则三类高频疑问。</p>
+      </div>
+      <details open>
+        <summary>参加吃瓜推特大赛需要推特账号吗？</summary>
+        <p>不需要。查看公开推文与热搜不要求登录，但截图时请保留原推文链接，便于评审核对；若作品引用了仅登录可见的内容，需在说明中标注。</p>
+      </details>
+      <details>
+        <summary>作品可以涉及未证实的爆料吗？</summary>
+        <p>可以提及，但必须明确标注为“未经证实”，并与已确认信息分开书写。把传闻当作事实陈述的作品，会在评审中被扣分甚至退回。</p>
+      </details>
+      <details>
+        <summary>同一话题可以多人参赛吗？</summary>
+        <p>可以。吃瓜推特大赛鼓励同一话题出现不同角度，评审会按切入方式与资料完整度区分，而不是按话题本身排名。</p>
+      </details>
+      <details>
+        <summary>投票结果如何公示？</summary>
+        <p>投票按三项指标分别统计后加权，结果与作品链接一并在页面公示。若发现刷票，相关作品会被移出当轮榜单。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#241f3b" stroke="#ffcf5c" stroke-width="2"/>
+            <path d="M32 12c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z" fill="#ffcf5c"/>
+            <circle cx="23" cy="43" r="4.4" fill="#ff6b9d"/>
+            <circle cx="42" cy="45" r="3.2" fill="#64e0c8"/>
+          </svg>
+          <span class="logo-text">吃瓜推特大赛</span>
+        </a>
+        <p>吃瓜推特大赛是一个围绕推特公开热搜展开的围观与整理活动，记录话题时间线，标注资料来源，让讨论过程更清楚。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>赛程</h4>
+          <a href="#rules">赛制说明</a>
+          <a href="#flow">参赛流程</a>
+          <a href="#topics">热搜话题</a>
+        </div>
+        <div class="foot-col">
+          <h4>帮助</h4>
+          <a href="#guide">围观指南</a>
+          <a href="#faq">常见问题</a>
+          <a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载参赛模板</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 吃瓜推特大赛 · 围观有度，记录有据</span>
+      <span>页面内容以公开话题为依据，具体条目随热搜变动</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 移动端导航
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A' && window.innerWidth <= 720) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // 首屏倒计时（会话内计时，用于展示投稿截止节奏）
+  (function () {
+    var el = document.getElementById('timer');
+    if (!el) return;
+    var total = 2 * 3600;
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      if (total < 0) { el.textContent = '本轮投稿已截止'; return; }
+      var h = Math.floor(total / 3600);
+      var m = Math.floor((total % 3600) / 60);
+      var s = total % 60;
+      el.textContent = '距投稿截止 ' + pad(h) + ':' + pad(m) + ':' + pad(s);
+      total--;
+      setTimeout(tick, 1000);
+    }
+    tick();
+  })();
+</script>
+</body>
+</html>
