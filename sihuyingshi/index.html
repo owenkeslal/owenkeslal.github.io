@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四虎影视-四虎影视最新电影电视剧在线观看_影视资源导航与片单推荐</title>
+<meta name="description" content="四虎影视主题首页，整理四虎影视的影视资源导航、片单推荐与观看指引。按类型、地区和年份梳理电影电视剧入口，提供清晰的浏览路径与选片参考。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M22 18v28l24-14z' fill='%23f5b942'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#111827;
+  --ink-soft:#374151;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --bg:#f7f7f5;
+  --card:#ffffff;
+  --gold:#c9962b;
+  --gold-soft:#f6ecd6;
+  --deep:#151a24;
+  --deep-2:#1f2733;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(21,26,36,0.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.header-inner{
+  display:flex;align-items:center;gap:18px;
+  min-height:64px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  color:#fff;font-weight:700;font-size:18px;letter-spacing:.5px;
+  flex-shrink:0;
+}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(145deg,#f5b942,#c9962b);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.brand .mark svg{width:18px;height:18px;}
+.nav{
+  display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;
+}
+.nav a{
+  color:#cbd5e1;font-size:14px;padding:8px 12px;border-radius:8px;
+  transition:color .2s,background .2s;white-space:nowrap;
+}
+.nav a:hover,.nav a:focus-visible{color:#fff;background:rgba(255,255,255,0.1);outline:none;}
+.nav a.cta{
+  color:#151a24;background:linear-gradient(145deg,#f5c95a,#c9962b);
+  font-weight:600;
+}
+.nav a.cta:hover{background:linear-gradient(145deg,#ffd97a,#d9a63a);}
+
+/* Hero */
+.hero{
+  background:
+    radial-gradient(900px 380px at 85% -10%,rgba(201,150,43,0.22),transparent 65%),
+    linear-gradient(160deg,#151a24 0%,#1f2733 60%,#232c3a 100%);
+  color:#fff;
+  padding:56px 0 60px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1.5px;color:#f5c95a;
+  border:1px solid rgba(245,201,90,0.4);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#f5c95a;}
+.hero h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.25;margin:0 0 16px;font-weight:800;letter-spacing:1px;
+}
+.hero h1 .accent{color:#f5c95a;}
+.hero p.lead{
+  color:#c3ccda;font-size:16px;max-width:520px;margin:0 0 26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:10px;font-size:15px;font-weight:600;
+  transition:transform .15s,background .2s,color .2s;
+  border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(145deg,#f5c95a,#c9962b);color:#151a24;}
+.btn-primary:hover{transform:translateY(-1px);background:linear-gradient(145deg,#ffd97a,#d9a63a);}
+.btn-ghost{border-color:rgba(255,255,255,0.28);color:#e5e7eb;}
+.btn-ghost:hover{background:rgba(255,255,255,0.1);}
+.btn[aria-disabled="true"]{opacity:.82;cursor:default;}
+.hero-note{font-size:13px;color:#9aa6b8;margin-top:16px;}
+
+/* Hero visual */
+.hero-visual{
+  position:relative;border-radius:16px;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.12);
+  background:linear-gradient(160deg,#232c3a,#151a24);
+  padding:22px;
+  box-shadow:0 24px 60px -30px rgba(0,0,0,0.8);
+}
+.screen-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.screen-strip .frame{
+  aspect-ratio:3/4;border-radius:9px;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#2f3a4b,#1b212b);
+  border:1px solid rgba(255,255,255,0.08);
+}
+.screen-strip .frame svg{position:absolute;inset:0;width:100%;height:100%;}
+.screen-strip .frame:nth-child(2){transform:translateY(14px);}
+.screen-strip .frame:nth-child(3){transform:translateY(4px);}
+.visual-caption{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:22px;font-size:13px;color:#9aa6b8;
+}
+.visual-caption strong{color:#f5c95a;font-weight:600;}
+
+/* Sections */
+.section{padding:56px 0;}
+.section-head{margin-bottom:30px;max-width:720px;}
+.section-head .kicker{
+  font-size:13px;letter-spacing:2px;color:var(--gold);
+  text-transform:uppercase;font-weight:700;margin-bottom:8px;
+}
+.section-head h2{
+  font-size:clamp(22px,2.8vw,29px);margin:0 0 10px;line-height:1.35;font-weight:800;
+}
+.section-head p{margin:0;color:var(--muted);font-size:15px;}
+
+/* Category grid */
+.cat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+.cat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px;transition:border-color .2s,transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;gap:8px;
+}
+.cat-card:hover{border-color:#d8b56a;transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(17,24,39,.5);}
+.cat-card .ico{
+  width:38px;height:38px;border-radius:10px;background:var(--gold-soft);
+  display:grid;place-items:center;margin-bottom:4px;
+}
+.cat-card .ico svg{width:20px;height:20px;stroke:#a87c1c;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.cat-card h3{margin:0;font-size:16px;font-weight:700;}
+.cat-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65;}
+.cat-card .more{font-size:13px;color:var(--gold);font-weight:600;margin-top:auto;}
+
+/* Picks */
+.picks{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.pick-list{display:flex;flex-direction:column;gap:0;}
+.pick{
+  display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;
+  padding:22px 4px;border-bottom:1px solid var(--line);
+}
+.pick:last-child{border-bottom:none;}
+.pick .rank{
+  font-size:24px;font-weight:800;color:#d6d3cd;font-variant-numeric:tabular-nums;
+  text-align:center;
+}
+.pick h3{margin:0 0 4px;font-size:17px;}
+.pick .meta{font-size:13px;color:var(--muted);}
+.pick .tag{
+  font-size:12.5px;color:#8a6212;background:var(--gold-soft);
+  border-radius:999px;padding:4px 12px;white-space:nowrap;font-weight:600;
+}
+
+/* Guide / article */
+.guide-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:36px;align-items:start;}
+.article h3{font-size:18px;margin:0 0 10px;}
+.article p{margin:0 0 16px;color:var(--ink-soft);font-size:15.5px;}
+.article ul{margin:0 0 16px;padding-left:20px;color:var(--ink-soft);font-size:15.5px;}
+.article li{margin-bottom:7px;}
+.aside-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;
+}
+.aside-card h3{font-size:16px;margin:0 0 12px;}
+.aside-card ol{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
+.aside-card li{margin-bottom:9px;}
+.aside-card .tip{
+  margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+  font-size:13.5px;color:var(--muted);
+}
+
+/* Filter */
+.filter-bar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin-bottom:22px;
+}
+.chip{
+  font-size:13.5px;padding:7px 15px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .18s;
+  font-family:inherit;
+}
+.chip:hover{border-color:#d8b56a;}
+.chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.search-box{
+  margin-left:auto;display:flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 12px;
+}
+.search-box input{
+  border:none;outline:none;font-size:14px;font-family:inherit;
+  width:170px;background:transparent;color:var(--ink);
+}
+.search-box svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2;}
+.lib-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.lib-item{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;
+  transition:border-color .2s;
+}
+.lib-item:hover{border-color:#d8b56a;}
+.lib-item .cat-label{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.5px;}
+.lib-item h3{font-size:15.5px;margin:6px 0 6px;}
+.lib-item p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;}
+.empty-tip{
+  display:none;padding:28px;text-align:center;color:var(--muted);
+  border:1px dashed var(--line);border-radius:12px;font-size:14px;
+}
+
+/* FAQ */
+.faq{background:#fff;border-top:1px solid var(--line);}
+.faq-item{
+  border-bottom:1px solid var(--line);padding:18px 0;
+}
+.faq-item:first-of-type{border-top:1px solid var(--line);}
+.faq-item summary{
+  cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";color:var(--gold);font-size:20px;font-weight:400;line-height:1;
+}
+.faq-item[open] summary::after{content:"–";}
+.faq-item p{margin:12px 0 0;font-size:14.5px;color:var(--ink-soft);}
+
+/* Footer */
+.site-footer{
+  background:var(--deep);color:#9aa6b8;padding:44px 0 28px;margin-top:0;
+}
+.footer-top{
+  display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:17px;}
+.footer-brand .mark{
+  width:30px;height:30px;border-radius:8px;background:linear-gradient(145deg,#f5b942,#c9962b);
+  display:grid;place-items:center;
+}
+.footer-brand .mark svg{width:16px;height:16px;}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;}
+.footer-links a:hover{color:#f5c95a;}
+.footer-bottom{
+  padding-top:20px;font-size:13px;color:#6b7280;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* Responsive */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .hero-visual{max-width:460px;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .guide-grid{grid-template-columns:1fr;gap:26px;}
+  .lib-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:680px){
+  .header-inner{flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:8px;}
+  .nav{margin-left:0;width:100%;overflow-x:auto;padding-bottom:2px;}
+  .nav a{padding:7px 10px;font-size:13.5px;}
+  .hero{padding:38px 0 44px;}
+  .hero p.lead{font-size:15px;}
+  .section{padding:40px 0;}
+  .cat-grid{grid-template-columns:1fr;}
+  .lib-grid{grid-template-columns:1fr;}
+  .pick{grid-template-columns:44px 1fr;gap:14px;}
+  .pick .tag{grid-column:2;justify-self:start;}
+  .pick .rank{font-size:20px;}
+  .search-box{margin-left:0;width:100%;}
+  .search-box input{width:100%;}
+  .filter-bar{gap:8px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="四虎影视首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#151a24"/></svg>
+      </span>
+      四虎影视
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#categories">影视分类</a>
+      <a href="#picks">本周片单</a>
+      <a href="#library">资源索引</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#library">开始找片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">影视资源导航 · 片单整理</span>
+        <h1>四虎影视</h1>
+        <p class="lead">四虎影视是一个以电影、电视剧资源整理与浏览指引为主的影视导航主题页面。这里把类型、地区、年份和口碑线索归拢到清晰入口，帮助你在动辄上千部的片库里快速缩小范围，找到今晚想看的那一部。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#library">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            浏览资源索引
+          </a>
+          <a class="btn btn-ghost" href="#picks">查看本周片单</a>
+        </div>
+        <p class="hero-note">片单与索引内容持续整理；具体片源可用性以各平台实际展示为准。</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="screen-strip">
+          <div class="frame">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice">
+              <rect width="120" height="160" fill="#1b212b"/>
+              <circle cx="60" cy="52" r="22" fill="#2f3a4b"/>
+              <path d="M60 34l14 8v16l-14 8-14-8V42z" fill="#c9962b" opacity=".7"/>
+              <rect x="18" y="98" width="84" height="7" rx="3.5" fill="#3a4657"/>
+              <rect x="18" y="114" width="60" height="7" rx="3.5" fill="#2f3a4b"/>
+              <rect x="18" y="130" width="42" height="7" rx="3.5" fill="#2f3a4b"/>
+            </svg>
+          </div>
+          <div class="frame">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice">
+              <rect width="120" height="160" fill="#232c3a"/>
+              <rect x="16" y="20" width="88" height="52" rx="6" fill="#2f3a4b"/>
+              <path d="M52 36v20l16-10z" fill="#f5c95a"/>
+              <rect x="16" y="86" width="88" height="7" rx="3.5" fill="#3a4657"/>
+              <rect x="16" y="102" width="66" height="7" rx="3.5" fill="#2f3a4b"/>
+              <rect x="16" y="118" width="80" height="7" rx="3.5" fill="#2f3a4b"/>
+              <rect x="16" y="134" width="50" height="7" rx="3.5" fill="#2f3a4b"/>
+            </svg>
+          </div>
+          <div class="frame">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice">
+              <rect width="120" height="160" fill="#1b212b"/>
+              <rect x="18" y="24" width="84" height="58" rx="6" fill="#2f3a4b"/>
+              <circle cx="60" cy="53" r="14" fill="none" stroke="#f5c95a" stroke-width="2.5"/>
+              <path d="M55 47l11 6-11 6z" fill="#f5c95a"/>
+              <rect x="18" y="96" width="84" height="7" rx="3.5" fill="#3a4657"/>
+              <rect x="18" y="112" width="58" height="7" rx="3.5" fill="#2f3a4b"/>
+              <rect x="18" y="128" width="70" height="7" rx="3.5" fill="#2f3a4b"/>
+            </svg>
+          </div>
+        </div>
+        <div class="visual-caption">
+          <span>片单结构示意</span>
+          <strong>类型 · 地区 · 年份</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">分类入口</div>
+        <h2>按类型进入，先定方向再挑片</h2>
+        <p>四虎影视的片库通常按内容类型与制作地区划分。先把范围缩小到一类，再从口碑与年份中筛出候选，比漫无目的地翻列表高效得多。</p>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="#library">
+          <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 21h10M12 18v3"/><path d="M10 9l4 2.5-4 2.5z"/></svg></span>
+          <h3>电影</h3>
+          <p>院线片、文艺片与经典老片混排，适合按年份或导演线索回看。</p>
+          <span class="more">查看电影索引 →</span>
+        </a>
+        <a class="cat-card" href="#library">
+          <span class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 6v12M18 6v12"/><path d="M10 10l4 2-4 2z"/></svg></span>
+          <h3>电视剧</h3>
+          <p>国产剧、日韩剧与欧美剧分栏陈列，可关注集数与更新节奏。</p>
+          <span class="more">查看剧集索引 →</span>
+        </a>
+        <a class="cat-card" href="#library">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 5v14M16 5v14"/><path d="M11 9l3 2-3 2z"/></svg></span>
+          <h3>动漫与综艺</h3>
+          <p>动画番剧、纪录与真人秀各有受众，适合轻量碎片化观看。</p>
+          <span class="more">查看动漫综艺 →</span>
+        </a>
+        <a class="cat-card" href="#picks">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span>
+          <h3>高分精选</h3>
+          <p>以口碑与讨论热度为线索的片单，适合不确定看什么的时候。</p>
+          <span class="more">查看高分片单 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Picks -->
+  <section class="section picks" id="picks">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">本周片单</div>
+        <h2>四虎影视片单：五部值得留意的候选</h2>
+        <p>片单按可看性与讨论度排列，每一条都注明类型与适合的观看场景，方便你按当下心情挑选。</p>
+      </div>
+      <div class="pick-list">
+
+        <article class="pick">
+          <div class="rank">01</div>
+          <div>
+            <h3>悬疑类 · 适合安静时段连看</h3>
+            <div class="meta">节奏偏慢、线索密集，建议不倍速观看，留意中段伏笔回收。</div>
+          </div>
+          <span class="tag">悬疑推理</span>
+        </article>
+
+        <article class="pick">
+          <div class="rank">02</div>
+          <div>
+            <h3>现实题材剧集 · 适合通勤碎片观看</h3>
+            <div class="meta">单集信息量适中，断点续看压力小，人物关系是主要看点。</div>
+          </div>
+          <span class="tag">都市生活</span>
+        </article>
+
+        <article class="pick">
+          <div class="rank">03</div>
+          <div>
+            <h3>经典老片 · 适合周末整段时间</h3>
+            <div class="meta">画幅与配乐带有年代特征，建议用大屏观看，感受镜头语言。</div>
+          </div>
+          <span class="tag">影史经典</span>
+        </article>
+
+        <article class="pick">
+          <div class="rank">04</div>
+          <div>
+            <h3>动画电影 · 适合家庭共看</h3>
+            <div class="meta">叙事完整、时长友好，对白清晰，适合与孩子一起观看讨论。</div>
+          </div>
+          <span class="tag">动画合家欢</span>
+        </article>
+
+        <article class="pick">
+          <div class="rank">05</div>
+          <div>
+            <h3>纪录作品 · 适合睡前慢看</h3>
+            <div class="meta">以观察视角展开，不依赖强情节，适合放松状态下观看。</div>
+          </div>
+          <span class="tag">纪录观察</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Library -->
+  <section class="section" id="library">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">资源索引</div>
+        <h2>先筛选，再决定看什么</h2>
+        <p>按类型点击筛选，或在右侧输入片名关键词。索引条目只描述内容方向与观看场景，不含具体片源地址。</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="按类型筛选资源">
+        <button class="chip active" data-filter="all" type="button">全部</button>
+        <button class="chip" data-filter="movie" type="button">电影</button>
+        <button class="chip" data-filter="series" type="button">电视剧</button>
+        <button class="chip" data-filter="anime" type="button">动漫</button>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="libSearch" type="search" placeholder="搜索片名关键词" aria-label="搜索片名关键词">
+        </div>
+      </div>
+
+      <div class="lib-grid" id="libGrid">
+        <article class="lib-item" data-cat="movie" data-title="悬疑 电影 推理 反转">
+          <span class="cat-label">电影</span>
+          <h3>悬疑推理片</h3>
+          <p>线索层层递进，结尾常有反转，适合喜欢推理解谜的观众。</p>
+        </article>
+        <article class="lib-item" data-cat="movie" data-title="经典 老片 黑白 影史">
+          <span class="cat-label">电影</span>
+          <h3>影史经典</h3>
+          <p>跨年代的代表作品，适合想系统补片、了解电影史的观众。</p>
+        </article>
+        <article class="lib-item" data-cat="series" data-title="都市 现实 剧集 生活">
+          <span class="cat-label">电视剧</span>
+          <h3>都市现实剧</h3>
+          <p>聚焦职业与家庭议题，人物关系复杂，适合慢慢追。</p>
+        </article>
+        <article class="lib-item" data-cat="series" data-title="古装 历史 长剧 权谋">
+          <span class="cat-label">电视剧</span>
+          <h3>古装历史剧</h3>
+          <p>体量较大，服化道与叙事结构是主要看点，适合整段观看。</p>
+        </article>
+        <article class="lib-item" data-cat="anime" data-title="动画 番剧 治愈 日常">
+          <span class="cat-label">动漫</span>
+          <h3>治愈日常番</h3>
+          <p>节奏舒缓、单集独立性强，适合作为睡前的放松选择。</p>
+        </article>
+        <article class="lib-item" data-cat="anime" data-title="动画 电影 合家欢 亲子">
+          <span class="cat-label">动漫</span>
+          <h3>动画长片</h3>
+          <p>画面完成度高，故事通俗，适合家庭共同观看与讨论。</p>
+        </article>
+      </div>
+      <p class="empty-tip" id="emptyTip">没有匹配的条目，换个关键词或切回「全部」试试。</p>
+    </div>
+  </section>
+
+  <!-- Guide -->
+  <section class="section" id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">观看指南</div>
+        <h2>在四虎影视类导航页里高效选片的三个习惯</h2>
+        <p>资源越多，选择成本越高。与其反复刷新列表，不如建立一套自己的筛选顺序。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="article">
+          <h3>一、先定场景，再定类型</h3>
+          <p>观看场景决定了片长与节奏的容忍度。通勤或午休只适合单集短、断点清晰的剧集；整晚的完整时间才适合长片与影史经典。先想清楚「我有多少时间」，再进入四虎影视的分类入口，能省掉大量翻找。</p>
+          <h3>二、用年份与地区做二次收敛</h3>
+          <p>同一类型下的作品差异很大。年份可以帮你避开画质与节奏上的时代落差，地区则对应叙事习惯与题材偏好。把这两个条件叠加在类型之上，候选通常能压缩到十条以内。</p>
+          <h3>三、把片单当作候选池，而非结论</h3>
+          <p>片单解决的是「有什么可看」，不是「你必须看这个」。看到感兴趣的方向后，再回到索引核对简介、集数与时长，确认符合预期再开始。四虎影视相关页面的价值在于组织信息，最终判断仍应回到作品本身。</p>
+          <ul>
+            <li>不确定时优先选叙事完整、单集独立的作品。</li>
+            <li>长剧先看前两集，确认节奏再决定是否追完。</li>
+            <li>合家观看注意分级与题材敏感度。</li>
+          </ul>
+        </div>
+        <aside class="aside-card">
+          <h3>选片检查清单</h3>
+          <ol>
+            <li>这次有多少可支配时间？</li>
+            <li>想要强情节还是轻松氛围？</li>
+            <li>是否介意慢节奏与开放式结尾？</li>
+            <li>有没有同行观看者需要照顾？</li>
+            <li>片名与类型是否已在索引中确认？</li>
+          </ol>
+          <p class="tip">把清单过一遍通常只需一分钟，却能明显减少「看了十分钟就想换片」的情况。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="section" id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">片单下载</div>
+        <h2>把本周片单存到本地</h2>
+        <p>片单文件包含类型标签与观看场景说明，便于离线整理或与朋友分享。文件内容与上方片单一致，不包含片源地址。</p>
+        <div class="hero-actions" style="margin-top:20px;">
+          <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;">下载</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">常见问题</div>
+        <h2>关于四虎影视页面，你可能想问的</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>四虎影视这个页面提供视频播放吗？</summary>
+        <p>本页是影视主题的导航与片单整理页面，提供分类入口、片单说明与选片方法，不内嵌视频播放器，也不提供具体片源地址。实际观看请以你使用的合法平台为准。</p>
+      </details>
+      <details class="faq-item">
+        <summary>片单里的条目会更新吗？</summary>
+        <p>片单按周期整理，条目会随内容方向调整。页面展示的是当前这一期整理的候选方向，不代表固定不变的榜单。</p>
+      </details>
+      <details class="faq-item">
+        <summary>搜索框能搜到什么？</summary>
+        <p>搜索框只在本页的资源索引条目内匹配片名与类型关键词，用于快速定位条目，不会跳转到外部站点，也不检索站外内容。</p>
+      </details>
+      <details class="faq-item">
+        <summary>下载按钮现在可以使用吗？</summary>
+        <p>当前下载入口尚未接入文件地址，处于暂不可用状态，按钮已做禁用处理。待片单文件准备好后会替换为可用链接。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#151a24"/></svg>
+          </span>
+          四虎影视
+        </div>
+        <p style="margin:12px 0 0;font-size:14px;max-width:420px;">四虎影视主题首页，专注影视资源分类导航、片单整理与选片方法，帮助访问者更高效地安排观看。</p>
+      </div>
+      <nav class="footer-links" aria-label="页尾导航">
+        <a href="#categories">影视分类</a>
+        <a href="#picks">本周片单</a>
+        <a href="#library">资源索引</a>
+        <a href="#guide">观看指南</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 四虎影视 · 影视导航与片单整理</span>
+      <span>页面内容仅供浏览参考，不提供片源存储与播放服务</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var items = Array.prototype.slice.call(document.querySelectorAll('.lib-item'));
+  var input = document.getElementById('libSearch');
+  var empty = document.getElementById('emptyTip');
+  var activeCat = 'all';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(el){
+      var okCat = activeCat === 'all' || el.getAttribute('data-cat') === activeCat;
+      var text = (el.getAttribute('data-title') + ' ' + el.textContent).toLowerCase();
+      var okText = q === '' || text.indexOf(q) !== -1;
+      var show = okCat && okText;
+      el.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    empty.style.display = shown === 0 ? 'block' : 'none';
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeCat = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+
+  input.addEventListener('input', apply);
+})();
+</script>
+
+</body>
+        </html>
